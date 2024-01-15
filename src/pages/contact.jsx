@@ -62,9 +62,6 @@ export default function Contact() {
     const serviceId = import.meta.env.VITE_MYSERVICEID;
     const templateId = import.meta.env.VITE_MYTEMPLATEID;
     const userId = import.meta.env.VITE_MYUSERID;
-    console.log(serviceId)
-    console.log(templateId)
-    console.log(userId)
     emailjs
       .send(serviceId, templateId, templateParams, userId)
       .then((response) => {
